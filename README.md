@@ -39,7 +39,9 @@ this is where you will be working today.
 
 1 - Get a Person
 -------------------
-Fill out the `getPerson` function, you can access the text that is typed into
+Fill out the `getPerson` function.
+
+You can access the text that is typed into
 the `name` input box with:
 
 ```js
@@ -50,3 +52,20 @@ Try it out with `console.log()`.
 
 Remember, this function should return an object that will have a `name` property
 and a `color` property.
+
+2 - Set a Person
+-------------------
+Fill out the `setPerson` function.
+
+To add a line of HTML from the Javascript you can use the following code:
+```js
+peopleList.append(
+    $("<p>").text("Crazy String")
+);
+```
+This will add a 
+```html
+<p>Crazy String</p>
+```
+to the page every time it is called.  You will need to change "Crazy String" to
+use information from the `person` object.
