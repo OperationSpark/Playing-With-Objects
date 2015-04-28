@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>An Object Form</title>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<style>
-		</style>
-    </head>
-    <body>
-        <div>
-            <label for="name">
+
+<head>
+    <title>An Object Form</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="name">
             Name:
             <div>
-                <input type="text" name="name"/>
+                <input type="text" name="name" />
             </div>
         </label>
-        </div>
-        <div>
-            <label for="color">
+    </div>
+    <div>
+        <label for="color">
             Favorite Color:
             <div>
-                <input type="text" name="color"/>
+                <input type="text" name="color" />
             </div>
         </label>
-        </div>
-        <input type="submit" value="Add" id="add"/>
-        <h1>
+    </div>
+    <input type="submit" value="Add" id="add" />
+    <h1>
             People:
         </h1>
-        <div id=peopleList>
-            
-        </div>
-        <script>
-            (function() {
-                'use strict';
-                var name = $("[name=name]");
-                var color = $("[name=color]");
-                var peopleList = $("[id=peopleList]");
-                
-                // Write your code below
-                
-                // Returns a person object that has 2 properties:
-                // * name
-                // * color
-                var getPerson = function () {
-                    return {
-                        name: name.val(),
-                        color: color.val()
-                    };
+    <div id=peopleList>
+
+    </div>
+    <script>
+        (function() {
+            'use strict';
+            var name = $("[name=name]");
+            var color = $("[name=color]");
+            var peopleList = $("[id=peopleList]");
+
+            // Write your code below
+
+            // Returns a person object that has 2 properties:
+            // * name
+            // * color
+            var getPerson = function() {
+                return {
+                    name: name.val(),
+                    color: color.val()
                 };
-                // Takes a person object and places a string on the page
-                var displayPersonInfo = function (person) {
-                    peopleList.append(
-                        $("<p>").text(person.name + " loves the color " +person.color)
-                    );
-                };
-                // Clears the inputs so that another person can be added
-                // to the list
-                var clearInputs = function () {
-                    name.val("");
-                    color.val("");
-                };
-                // Click handler for the Add button, will run every time
-                // Add is clicked
-                $("[id=add]").on('click', function(){
-                    displayPersonInfo(getPerson());
-                    clearInputs();
-                });
-            }).call();
-        </script>
-    </body>
+            };
+            // Takes a person object and places a string on the page
+            var displayPersonInfo = function(person) {
+                peopleList.append(
+                    $("<p>").text(person.name + " loves the color " + person.color)
+                );
+            };
+            // Clears the inputs so that another person can be added
+            // to the list
+            var clearInputs = function() {
+                name.val("");
+                color.val("");
+            };
+            // Click handler for the Add button, will run every time
+            // Add is clicked
+            $("[id=add]").on('click', function() {
+                displayPersonInfo(getPerson());
+                clearInputs();
+            });
+        }).call();
+    </script>
+</body>
+
 </html>
