@@ -26,7 +26,7 @@ Make a function that takes a `person` object and adds a sentence to the list.
 Make a function that clears the input boxes so that another person can be entered.
 4. 
 Make a function that runs when the `Add` button is clicked and uses the other
-functions to add a `person` to the list and clear the form.
+functions to add a `person` to the list and clear the inputs.
 
 Open up your website workspace and
 
@@ -53,9 +53,9 @@ Try it out with `console.log()`.
 Remember, this function should return an object that will have a `name` property
 and a `color` property.
 
-2 - Set a Person
+2 - Display a Person
 -------------------
-Fill out the `setPerson` function.  After we turn the inputs into a `person`
+Fill out the `displayPersonInfo` function.  After we turn the inputs into a `person`
 object we now need to turn that into a string and put it on the page.
 
 To add a line of HTML from the Javascript you can use the following code:
@@ -89,7 +89,7 @@ this in the terminal.
 
 3 - Clear the inputs
 -------------------
-Fill out the `clearForm` function. Once we have all the information that we need
+Fill out the `clearInputs` function. Once we have all the information that we need
 from the inputs we need to clear them so that we can add another person to our
 list.
 
@@ -112,8 +112,8 @@ $("[id=add]").click(function(){
 This function gets called when the user clicks on `Add` so we need to
 
 1. Get the person using `getPerson`
-2. Pass the `person` object into `setPerson`
-3. Clear the inputs with `clearForm`
+2. Pass the `person` object into `displayPersonInfo`
+3. Clear the inputs with `clearInputs`
 
 5 - Customize it!
 -------------------

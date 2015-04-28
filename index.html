@@ -31,40 +31,33 @@
         </div>
         <script>
             (function() {
-                'use strict'
-                var getPerson;
-                var setPerson;
-                var clearForm;
-                var name;
-                var color;
-                var peopleList
-            
-                name = $("[name=name]");
-                color = $("[name=color]");
-                peopleList = $("[id=peopleList]");
+                'use strict';
+                var name = $("[name=name]");
+                var color = $("[name=color]");
+                var peopleList = $("[id=peopleList]");
                 
                 // Write your code below
                 
                 // Returns a person object that has 2 properties:
                 // * name
                 // * color
-                getPerson = function () {
+                var getPerson = function () {
 
                 };
                 // Takes a person object and places a string on the page
-                setPerson = function (person) {
+                var displayPersonInfo = function (person) {
 
                 };
                 // Clears the inputs so that another person can be added
                 // to the list
-                clearForm = function () {
+                var clearInputs = function () {
 
                 };
                 // Click handler for the Add button, will run every time
                 // Add is clicked
-                $("[id=add]").click(function(){
+                $("[id=add]").on('click', function(){
 
-                })
+                });
             }).call();
         </script>
     </body>
