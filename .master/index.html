@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>An Object Form</title>
+		<style>
+		</style>
+    </head>
+    <body>
+        <div>
+            <label for="name">
+            Name:
+            <div>
+                <input type="text" name="name"/>
+            </div>
+        </label>
+        </div>
+        <div>
+            <label for="color">
+            Favorite Color:
+            <div>
+                <input type="text" name="color"/>
+            </div>
+        </label>
+        </div>
+        <input type="submit" value="Add" id="add"/>
+        <h1>
+            People:
+        </h1>
+        <div id=peopleList>
+            
+        </div>
+        <script>
+            (function() {
+                'use strict'
+                var getPerson;
+                var setPerson;
+                var clearForm;
+                var name;
+                var color;
+                var peopleList
+            
+                name = $("[name=name]");
+                color = $("[name=color]");
+                peopleList = $("[id=peopleList]");
+            
+                // Write your code below
+                getPerson = function () {
+                    return {
+                        name: name.val(),
+                        color: color.val()
+                    };
+                };
+                setPerson = function (person) {
+                    peopleList.append(
+                        $("<p>").text(person.name + " loves the color " +person.color)
+                    );
+                };
+                clearForm = function () {
+                    name.val("");
+                    color.val("");
+                };
+                $("[id=add]").click(function(){
+                    setPerson(getPerson());
+                    clearForm();
+                })
+            }).call();
+        </script>
+    </body>
+</html>
