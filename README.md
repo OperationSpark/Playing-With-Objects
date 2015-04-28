@@ -55,7 +55,8 @@ and a `color` property.
 
 2 - Set a Person
 -------------------
-Fill out the `setPerson` function.
+Fill out the `setPerson` function.  After we turn the inputs into a `person`
+object we now need to turn that into a string and put it on the page.
 
 To add a line of HTML from the Javascript you can use the following code:
 ```js
@@ -69,3 +70,32 @@ This will add a
 ```
 to the page every time it is called.  You will need to change "Crazy String" to
 use information from the `person` object.
+
+3 - Clear the inputs
+-------------------
+Fill out the `clearForm` function. Once we have all the information that we need
+from the inputs we need to clear them so that we can add another person to our
+list.
+
+To clear the `name` input box add: 
+```js
+name.val("")
+```
+to the function.  Also do this for the color input box
+
+4 - Put it all Together
+-------------------
+We need to use the above functions in response to the user clicking the `Add`
+button. This is what we call an event handler and it looks like:
+```js
+$("[id=add]").click(function(){
+
+})
+```
+
+This function gets called when the user clicks on `Add` so we need to
+
+1. Get the person using `getPerson`
+2. Pass the `person` object into `setPerson`
+3. Clear the inputs with `clearForm`
+
