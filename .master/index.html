@@ -25,6 +25,14 @@
             </div>
         </label>
     </div>
+    <div>
+        <label for="age">
+            Age:
+            <div>
+                <input type="text" name="age" />
+            </div>
+        </label>
+    </div>
     <input type="submit" value="Add" id="add" />
     <h1>
             People:
@@ -37,6 +45,7 @@
             'use strict';
             var name = $("[name=name]");
             var color = $("[name=color]");
+            var age = $("[name=age]");
             var peopleList = $("[id=peopleList]");
 
             // Write your code below
@@ -47,13 +56,15 @@
             var getPerson = function() {
                 return {
                     name: name.val(),
-                    color: color.val()
+                    color: color.val(),
+                    age: age.val()
                 };
             };
             // Takes a person object and places a string on the page
             var displayPersonInfo = function(person) {
                 peopleList.append(
-                    $("<p>").text(person.name + " loves the color " + person.color)
+                    $("<p>").text(person.name + " loves the color "
+                    + person.color + " and is " + person.age + " years old.")
                 );
             };
             // Clears the inputs so that another person can be added
@@ -61,6 +72,7 @@
             var clearInputs = function() {
                 name.val("");
                 color.val("");
+                age.val("");
             };
             // Click handler for the Add button, will run every time
             // Add is clicked
