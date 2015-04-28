@@ -74,7 +74,7 @@ var string = "My house is " + house.age + " years old and is at " + house.addres
 notice that the `+` operator is used to join strings together.
 
 In the browser console, use this object to make the string:
-`"My house has 4 rooms."'
+`"My house has 4 rooms."`
 
 2b - Display a Person
 -------------------
