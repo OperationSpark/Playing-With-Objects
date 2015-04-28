@@ -115,3 +115,7 @@ This function gets called when the user clicks on `Add` so we need to
 2. Pass the `person` object into `setPerson`
 3. Clear the inputs with `clearForm`
 
+5 - Customize it!
+-------------------
+Now make it yours: Add a new input to the html and try to add it through the
+whole pipeline we created.
