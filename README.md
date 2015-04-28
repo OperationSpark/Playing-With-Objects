@@ -53,7 +53,30 @@ Try it out with `console.log()`.
 Remember, this function should return an object that will have a `name` property
 and a `color` property.
 
-2 - Display a Person
+2a - Strings
+-------------------
+In step 2b you will need to build a string from an object.  Let's practice this
+in the console.
+
+If I have a `house` object that looks as follows:
+```js
+{
+    "address": "123 Fake St.",
+    "age": 43,
+    "rooms": 4
+}
+```
+if I want to make the string `"My house is 43 years old and is at 123 Fake St.`"
+then I need code that looks like:
+```js
+var string = "My house is " + house.age + " years old and is at " + house.address;
+```
+notice that the `+` operator is used to join strings together.
+
+In the browser console, use this object to make the string:
+`"My house has 4 rooms."'
+
+2b - Display a Person
 -------------------
 Fill out the `displayPersonInfo` function.  After we turn the inputs into a `person`
 object we now need to turn that into a string and put it on the page.
@@ -70,22 +93,6 @@ This will add a
 ```
 to the page every time it is called.  You will need to change "Crazy String" to
 use information from the `person` object.
-
-If I have a `house` object that looks as follows:
-```js
-{
-    "address": "123 Fake St.",
-    "age": 43,
-    "rooms": 4
-}
-```
-if I want to make the string `"My house is 43 years old and is at 123 Fake St.`"
-then I need code that looks like:
-```js
-var string = "My house is " + house.age + " years old and is at " + house.address;
-```
-notice that the `+` operator is used to join strings together. Play around with
-this in the terminal.
 
 3 - Clear the inputs
 -------------------
