@@ -12,14 +12,14 @@ We've provided you with the html, you just need to add some Javascript to make
 everything work smoothly.
 
 The idea is that the user will type in some information in the input boxes and
-click the "Add" button. Then the information that they input will be transformed
+click the `Add` button. Then the information that they input will be transformed
 into a sentence like: "Ben loves the color yellow." Since each person has multiple
 pieces of information about themselves,
 we will group them into a `person` object.  We will do this in the following steps:
 
 1. 
 Make a function that returns a `person` object which contains the information
-entered inthe input boxes. 
+entered in the input boxes. 
 2. 
 Make a function that takes a `person` object and adds a sentence to the list.
 3. 
@@ -70,6 +70,22 @@ This will add a
 ```
 to the page every time it is called.  You will need to change "Crazy String" to
 use information from the `person` object.
+
+If I have a `house` object that looks as follows:
+```js
+{
+    "address": "123 Fake St.",
+    "age": 43,
+    "rooms": 4
+}
+```
+if I want to make the string `"My house is 43 years old and is at 123 Fake St.`"
+then I need code that looks like:
+```js
+var string = "My house is " + house.age + " years old and is at " + house.address;
+```
+notice that the `+` operator is used to join strings together. Play around with
+this in the terminal.
 
 3 - Clear the inputs
 -------------------
